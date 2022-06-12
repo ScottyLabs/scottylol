@@ -6,5 +6,5 @@ matches:
   - google
   - goo
   - goog
-redirect: https://google.com/search
-param: q
+searchUrl: https://google.com/search?q=
+home: https://google.com

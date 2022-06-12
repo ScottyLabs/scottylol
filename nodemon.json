@@ -2,5 +2,5 @@
     "ignore": [".git", "node_modules"],
     "watch": ["./"],
     "exec": "npm start",
-    "ext": "ts"
+    "ext": "ts, yml"
 }

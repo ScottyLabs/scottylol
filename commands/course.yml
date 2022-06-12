@@ -3,6 +3,9 @@ description: Search info about courses at CMU
 author: bradleyt
 matches:
   - course
+  - courses
   - fce
+  - fces
   - units
-redirect: https://cmucourses.com/course
+searchUrl: https://cmucourses.com/course/
+home: https://cmucourses.com

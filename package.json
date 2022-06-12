@@ -25,6 +25,7 @@
     "typescript": "^4.7.3"
   },
   "dependencies": {
+    "closest-match": "^1.3.3",
     "express": "^4.18.1",
     "nodemon": "^2.0.16",
     "yaml": "^2.1.1"

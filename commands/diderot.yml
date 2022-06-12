@@ -1,0 +1,8 @@
+name: Diderot
+description: Access a course Diderot page.
+author: rgodse
+matches:
+ - d
+ - diderot
+searchUrl: https://www.diderot.one/courses/
+home: https://www.diderot.one

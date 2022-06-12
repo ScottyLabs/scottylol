@@ -1,0 +1,9 @@
+name: CMU Eats
+description: Search info about dining locations at CMU
+author: wweerasi
+matches:
+  - eat
+  - cmueats
+  - noms
+  - dining
+home: https://cmueats.com
