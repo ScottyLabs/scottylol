@@ -67,17 +67,19 @@ const readCommands = (): CommandMapping => {
     if (match === null) {
       return res.status(400).send("Bad request");
     }
-    const token = match[1];
-    const query = match[2];
-    const config = mappings[token];
-    const home = config.home;
-    const searchUrl = config.searchUrl;
 
+    const token = match[1];
     // If no matching token is found go to fallback
     if (!(token in mappings)) {
       const closest = closestMatch(token, Object.keys(mappings));
       return next({token, closest});
     }
+
+    const query = match[2];
+    const config = mappings[token];
+    const home = config.home;
+    const searchUrl = config.searchUrl;
+
 
     const target = (searchUrl === undefined || query === undefined) ? home : searchUrl + query;
 
