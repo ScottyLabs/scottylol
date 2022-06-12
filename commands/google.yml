@@ -1,0 +1,10 @@
+name: Google
+description: Search on Google
+author: dchwang
+matches:
+  - g
+  - google
+  - goo
+  - goog
+redirect: https://google.com/search
+param: q
