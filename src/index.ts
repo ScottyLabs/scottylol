@@ -2,9 +2,10 @@ import express from 'express';
 import fs from 'fs';
 import yaml from 'yaml';
 import { closestMatch } from 'closest-match';
+import 'dotenv/config';
 
-const COMMAND_DIR = './commands';
-const PORT = 3000;
+const COMMAND_DIR = process.env.COMMAND_DIR ??'./commands';
+const PORT = process.env.PORT ?? 3000;
 
 type CommandConfig = {
   name: string;
