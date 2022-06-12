@@ -1,0 +1,9 @@
+name: Google Drive
+description: Search your google drive like "drive hello world"
+author: wweerasi
+matches:
+  - gdrive
+  - drive
+  - docs
+home: https://drive.google.com/
+searchUrl: https://drive.google.com/drive/search?q=

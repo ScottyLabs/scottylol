@@ -1,0 +1,7 @@
+name: Autolab
+description: Redirect to autolab. Include the autolab course code in the query to go to the right course page.
+author: wweerasi
+matches:
+  - autolab
+home: https://autolab.andrew.cmu.edu/
+searchUrl: https://autolab.andrew.cmu.edu/courses/

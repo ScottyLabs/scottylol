@@ -1,0 +1,6 @@
+name: SIO
+description: Visit SIO.
+author: rgodse
+matches:
+  - sio
+home: https://s3.andrew.cmu.edu/sio/

@@ -1,0 +1,9 @@
+name: Gradescope
+description: Redirect to gradescope. Include the gradescope course code in the query to go to the right course page.
+author: wweerasi
+matches:
+  - grades
+  - gradescope
+  - gs
+home: https://gradescope.com
+searchUrl: https://www.gradescope.com/courses/

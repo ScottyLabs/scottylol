@@ -1,0 +1,10 @@
+name: GMail
+description: Search your gmail
+author: wweerasi
+matches:
+  - gmail
+  - email
+  - mail
+  - letters
+home: https://gmail.com
+searchUrl: https://mail.google.com/mail/u/

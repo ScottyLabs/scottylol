@@ -1,0 +1,9 @@
+name: Canvas
+description: Visit canvas with optional course number
+author: rgodse
+matches:
+  - can
+  - canvas
+  - cv
+home: https://canvas.cmu.edu/
+searchUrl: https://canvas.cmu.edu/courses/

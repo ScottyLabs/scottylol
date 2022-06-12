@@ -1,5 +1,5 @@
 name: Course Tool
-description: Search info about courses at CMU
+description: Search info about courses at CMU like "fce 122"
 author: bradleyt
 matches:
   - course

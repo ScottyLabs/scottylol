@@ -1,0 +1,10 @@
+name: Calendar
+description: Redirect to calendar.
+author: wweerasi
+matches:
+  - cal
+  - calendar
+  - gcal
+  - c
+home: https://calendar.google.com/
+home: https://calendar.google.com/u/

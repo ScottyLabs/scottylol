@@ -1,0 +1,10 @@
+name: Messenger
+description: Access Facebook Messenger
+author: rgodse
+matches:
+  - m
+  - messenger
+  - mess
+  - zucchat
+  - zuccchat
+home: https://www.messenger.com/

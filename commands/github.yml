@@ -1,0 +1,9 @@
+name: GitHub
+description: Search github like "gh scottylabs"
+author: wweerasi
+matches:
+  - gh
+  - code
+  - github
+home: https://github.com
+searchUrl: https://github.com/search?q=

@@ -1,0 +1,7 @@
+name: 15251
+description: Redirect to 15251 website
+author: wweerasi
+matches:
+  - 15251
+  - 251
+home: https://cs251.com/

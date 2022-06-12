@@ -1,6 +1,6 @@
 {
     "ignore": [".git", "node_modules"],
     "watch": ["./"],
-    "exec": "npm start",
+    "exec": "npm run start:ts",
     "ext": "ts, yml"
 }

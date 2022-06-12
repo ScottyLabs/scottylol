@@ -1,0 +1,8 @@
+name: Piazza
+description: Redirect to piazza website
+author: wweerasi
+matches:
+  - piazza
+  - pz
+  - p
+home: https://piazza.com/class
