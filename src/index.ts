@@ -68,7 +68,7 @@ const readCommands = (): CommandMapping => {
       return res.status(400).send("Bad request");
     }
 
-    const token = match[1];
+    const token = match[1].toLowerCase();
     // If no matching token is found go to fallback
     if (!(token in mappings)) {
       const closest = closestMatch(token, Object.keys(mappings));

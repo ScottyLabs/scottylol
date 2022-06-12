@@ -1,0 +1,7 @@
+name: TypeScript Handbook
+description: View the TypeScript Docs
+author: dchwang
+matches:
+  - ts
+  - typescript
+home: https://www.typescriptlang.org/docs/

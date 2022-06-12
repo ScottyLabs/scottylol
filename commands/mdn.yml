@@ -1,0 +1,9 @@
+name: MDN Web Docs
+description: Search the MDN Web Docs
+author: dchwang
+matches:
+  - mdn
+  - js
+  - javascript
+searchUrl: https://developer.mozilla.org/en-US/search?q=
+home: https://developer.mozilla.org/
