@@ -1,0 +1,8 @@
+name: Course Tool
+description: Search info about courses at CMU
+author: bradleyt
+matches:
+  - course
+  - fce
+  - units
+redirect: https://cmucourses.com/course
