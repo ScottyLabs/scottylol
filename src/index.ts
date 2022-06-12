@@ -6,7 +6,6 @@ import 'dotenv/config';
 
 const COMMAND_DIR = process.env.COMMAND_DIR ??'./commands';
 const PORT = process.env.PORT ?? 3000;
-
 type CommandConfig = {
   name: string;
   description: string;
@@ -58,7 +57,9 @@ const readCommands = (): CommandMapping => {
 (async () => {
   const mappings = readCommands();
   const app = express();
-  
+
+  app.set('view engine', 'ejs');
+
   app.get('/search', (req, res, next) => {
     const { q } = req.query;
     if (typeof q !== "string") {
@@ -74,7 +75,7 @@ const readCommands = (): CommandMapping => {
     // If no matching token is found go to fallback
     if (!(token in mappings)) {
       const closest = closestMatch(token, Object.keys(mappings));
-      const currQuery = match[2] ?? "";
+      const currQuery = match[2] ? " " + match[2] : "";
       return next({token, closest, currQuery});
 }
   
@@ -90,8 +91,9 @@ const readCommands = (): CommandMapping => {
     res.redirect(url.toString());
   });
 
-  const errorHandler: express.ErrorRequestHandler = (value: {token: string, closest: string, currQuery:string}, req, res, next) => {
-    res.status(404).render("../views/pages/404.html", { query: value.closest+value.currQuery });
+  const errorHandler: express.ErrorRequestHandler = (value: { token: string, closest: string, currQuery: string }, req, res, next) => {
+    
+    res.status(404).render("pages/404", { query: `${value.closest}${value.currQuery}` });
     // send(`Command not found: ${value.token}. Did you mean: ${value.closest}?`);
   }
   app.use(errorHandler);
