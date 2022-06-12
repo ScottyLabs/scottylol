@@ -70,12 +70,14 @@ const readCommands = (): CommandMapping => {
     }
 
     const token = match[1].toLowerCase();
+
     // If no matching token is found go to fallback
     if (!(token in mappings)) {
       const closest = closestMatch(token, Object.keys(mappings));
-      return next({token, closest});
-    }
-
+      const currQuery = match[2] ?? "";
+      return next({token, closest, currQuery});
+}
+  
     const query = match[2];
     const config = mappings[token];
     const home = config.home;
@@ -88,8 +90,9 @@ const readCommands = (): CommandMapping => {
     res.redirect(url.toString());
   });
 
-  const errorHandler: express.ErrorRequestHandler = (value: {token: string, closest: string}, req, res, next) => {
-    res.status(404).send(`Command not found: ${value.token}. Did you mean: ${value.closest}?`);
+  const errorHandler: express.ErrorRequestHandler = (value: {token: string, closest: string, currQuery:string}, req, res, next) => {
+    res.status(404).render("../views/pages/404.html", { query: value.closest+value.currQuery });
+    // send(`Command not found: ${value.token}. Did you mean: ${value.closest}?`);
   }
   app.use(errorHandler);
 
