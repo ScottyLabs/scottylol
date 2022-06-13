@@ -1,5 +1,5 @@
 name: Course Tool
-description: Search info about courses at CMU like "fce 122"
+description: Search info about courses at CMU like "fce <c"
 author: bradleyt
 matches:
   - course
@@ -7,5 +7,6 @@ matches:
   - fce
   - fces
   - units
+  - curse
 searchUrl: https://cmucourses.com/course/
 home: https://cmucourses.com
