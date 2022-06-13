@@ -131,6 +131,8 @@ a::after {
 <div class="overlay"></div>
 <div class="terminal">
   <h1>Error <span class="errorcode">404</span></h1>
-  <p class="output">We couldn't find what you were looking for :(</p>
-<%- include('../partials/suggestion') %>  <p class="output">Good luck.</p>
+  <%- include('../partials/notfound') %>  
+  <%- include('../partials/suggestion') %>  
+  <%- include('../partials/google') %>  
+  <p class="output">Good luck.</p>
 </div>

@@ -76,7 +76,7 @@ const readCommands = (): CommandMapping => {
     if (!(token in mappings)) {
       const closest = closestMatch(token, Object.keys(mappings));
       const currQuery = match[2] ? " " + match[2] : "";
-      return next({token, closest, currQuery});
+      return next({token, closest, currQuery, currSearch:q});
 }
   
     const query = match[2];
@@ -91,9 +91,9 @@ const readCommands = (): CommandMapping => {
     res.redirect(url.toString());
   });
 
-  const errorHandler: express.ErrorRequestHandler = (value: { token: string, closest: string, currQuery: string }, req, res, next) => {
+  const errorHandler: express.ErrorRequestHandler = (value: { token: string, closest: string, currQuery: string, currSearch:string }, req, res, next) => {
     
-    res.status(404).render("pages/404", { query: `${value.closest}${value.currQuery}` });
+    res.status(404).render("pages/404", { query: `${value.closest}${value.currQuery}`, currSearch: value.currSearch });
     // send(`Command not found: ${value.token}. Did you mean: ${value.closest}?`);
   }
   app.use(errorHandler);
