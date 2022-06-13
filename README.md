@@ -2,7 +2,7 @@
 
 Scottylol is an exciting search tool for CMU. It is ScottyLabs' implementation of Facebook's internal bunnylol search tool.
 
-## Setup instructions
+## Setup `scottylol` as your search engine
 
 - Navigate to search engine settings on your browser
 - Add a new search engine called `scottylol` and set the url to `https://apis.scottylabs.org/lol/search?q=%s`
