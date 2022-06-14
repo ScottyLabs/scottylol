@@ -98,5 +98,43 @@ const readCommands = (): CommandMapping => {
   }
   app.use(errorHandler);
 
+  app.get('/noob', (req, res, next) => {
+    const { q } = req.query;
+    if (typeof q !== "string") {
+      return res.status(400).send("Bad request");
+    }
+    const match = q.match(/^(\S*)(?:\s(.*))?$/);
+    if (match === null) {
+      return res.status(400).send("Bad request");
+    }
+
+    const token = match[1].toLowerCase();
+
+    // If no matching token is found go to fallback
+    if (!(token in mappings)) {
+      const closest = closestMatch(token, Object.keys(mappings));
+      const currQuery = match[2] ? " " + match[2] : "";
+      return next(q);
+}
+  
+    const query = match[2];
+    const config = mappings[token];
+    const home = config.home;
+    const searchUrl = config.searchUrl;
+
+
+    const target = (searchUrl === undefined || query === undefined) ? home : searchUrl + query;
+
+    const url = new URL(target);
+    res.redirect(url.toString());
+  });
+
+  const noobErrorHandler: express.ErrorRequestHandler = (currSearch:string, req, res, next) => {
+    
+    res.status(404).redirect(`https://google.com/search?q=${currSearch}`);
+    // send(`Command not found: ${value.token}. Did you mean: ${value.closest}?`);
+  }
+  app.use(noobErrorHandler);
+
   app.listen(PORT, () => console.log(`Server is listening at port ${PORT}.`));
 })();
