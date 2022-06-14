@@ -131,7 +131,6 @@ const readCommands = (): CommandMapping => {
   const noobErrorHandler: express.ErrorRequestHandler = (currSearch:string, req, res, next) => {
     
     res.status(404).redirect(`https://google.com/search?q=${currSearch}`);
-    // send(`Command not found: ${value.token}. Did you mean: ${value.closest}?`);
   }
   app.use(noobErrorHandler);
 
