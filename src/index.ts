@@ -58,6 +58,19 @@ const readCommands = (): CommandMapping => {
   const mappings = readCommands();
   const app = express();
 
+  function getMapping(token: string, query?: string):URL|null {
+    if (!(token in mappings)) {
+      return null;
+    }
+
+    const config = mappings[token];
+    const home = config.home;
+    const searchUrl = config.searchUrl;
+    const target = (searchUrl === undefined || query === undefined) ? home : searchUrl + query;
+
+    return new URL(target);
+  }
+
   app.set('view engine', 'ejs');
 
   app.get('/search', (req, res, next) => {
@@ -71,23 +84,17 @@ const readCommands = (): CommandMapping => {
     }
 
     const token = match[1].toLowerCase();
+    const query = match[2];
+
+    const url = getMapping(token, query)
 
     // If no matching token is found go to fallback
-    if (!(token in mappings)) {
+    if (!url) {
       const closest = closestMatch(token, Object.keys(mappings));
       const currQuery = match[2] ? " " + match[2] : "";
       return next({token, closest, currQuery, currSearch:q});
-}
-  
-    const query = match[2];
-    const config = mappings[token];
-    const home = config.home;
-    const searchUrl = config.searchUrl;
+    }
 
-
-    const target = (searchUrl === undefined || query === undefined) ? home : searchUrl + query;
-
-    const url = new URL(target);
     res.redirect(url.toString());
   });
 
@@ -109,23 +116,15 @@ const readCommands = (): CommandMapping => {
     }
 
     const token = match[1].toLowerCase();
+    const query = match[2];
+
+    const url = getMapping(token, query)
 
     // If no matching token is found go to fallback
-    if (!(token in mappings)) {
-      const closest = closestMatch(token, Object.keys(mappings));
-      const currQuery = match[2] ? " " + match[2] : "";
+    if (!url) {
       return next(q);
-}
-  
-    const query = match[2];
-    const config = mappings[token];
-    const home = config.home;
-    const searchUrl = config.searchUrl;
+    }
 
-
-    const target = (searchUrl === undefined || query === undefined) ? home : searchUrl + query;
-
-    const url = new URL(target);
     res.redirect(url.toString());
   });
 
