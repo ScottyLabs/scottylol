@@ -23,7 +23,7 @@ module.exports = {
       repo: "https://github.com/ScottyLabs/scottylol",
       path: "/opt/github/scottylol",
       "post-deploy":
-        "npm install && npm run build && pm2 reload ecosystem.config.js --env production && pm2 save",
+        "npm install --production=false && npm run build && npm prune && pm2 reload ecosystem.config.js --env production && pm2 save",
       env: {
         NODE_ENV: "production",
       },
