@@ -1,0 +1,20 @@
+<% for (const commandHelpInfo of helpInfo) { %>
+  <tr>
+    <td><%- commandHelpInfo.name %></td>
+    <td><%- commandHelpInfo.description %></td>
+    <td>
+      <ul>
+        <% for (const match of commandHelpInfo.matches) { %>
+          <li><a href=https://scotty.lol/search?q=<%- match -%>><%- match -%></a></li>
+        <% } %>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <% for (const example of commandHelpInfo.examples) { %>
+          <li><a href=https://scotty.lol/search?q=<%- example -%>><%- example -%></a></li>
+        <% } %>
+      </ul>
+    </td>
+  </tr>
+<% } %>

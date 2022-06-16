@@ -119,7 +119,7 @@ const readCommands = (): CommandData => {
   });
 
   app.get("/help", (req, res, next) => {
-    res.send(helpInfo);
+    res.render("pages/help", {helpInfo});
   });
 
   const errorHandler: express.ErrorRequestHandler = (value: { token: string, closest: string, currQuery: string, currSearch:string }, req, res, next) => {
@@ -150,6 +150,11 @@ const readCommands = (): CommandData => {
     }
 
     res.redirect(url.toString());
+  });
+
+  
+  app.get("/", (req, res, next) => {
+    res.redirect("/help");
   });
 
   const noobErrorHandler: express.ErrorRequestHandler = (currSearch:string, req, res, next) => {
