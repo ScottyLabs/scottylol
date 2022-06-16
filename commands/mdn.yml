@@ -7,3 +7,6 @@ matches:
   - javascript
 searchUrl: https://developer.mozilla.org/en-US/search?q=
 home: https://developer.mozilla.org/
+examples:
+  - js
+  - js fetch

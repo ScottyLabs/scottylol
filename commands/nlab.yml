@@ -5,3 +5,6 @@ matches:
   - nl
 home: https://ncatlab.org/nlab/show/HomePage
 searchUrl: https://ncatlab.org/nlab/search?query=
+examples:
+  - nl
+  - nl bifunctor lemma

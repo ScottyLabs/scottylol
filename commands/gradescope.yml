@@ -7,3 +7,6 @@ matches:
   - gs
 home: https://gradescope.com
 searchUrl: https://www.gradescope.com/courses/
+examples:
+  - gs
+  - gs 281511

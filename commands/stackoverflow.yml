@@ -6,3 +6,6 @@ matches:
   - idk
 home: https://stackoverflow.com/
 searchUrl: https://stackoverflow.com/search?q=
+examples:
+  - so
+  - idk segmentation fault

@@ -5,3 +5,5 @@ matches:
   - ts
   - typescript
 home: https://www.typescriptlang.org/docs/
+examples:
+  - ts

@@ -13,6 +13,7 @@ type CommandConfig = {
   matches: string[];
   searchUrl?: string;
   home: string;
+  example: string[];
 }
 
 type Redirect = {
@@ -96,6 +97,10 @@ const readCommands = (): CommandMapping => {
     }
 
     res.redirect(url.toString());
+  });
+
+  app.get("/help", (req, res, next) => {
+
   });
 
   const errorHandler: express.ErrorRequestHandler = (value: { token: string, closest: string, currQuery: string, currSearch:string }, req, res, next) => {

@@ -4,3 +4,5 @@ author: rgodse
 matches:
   - sio
 home: https://s3.andrew.cmu.edu/sio/
+examples:
+  - sio

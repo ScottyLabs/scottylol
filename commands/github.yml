@@ -7,3 +7,6 @@ matches:
   - github
 home: https://github.com
 searchUrl: https://github.com/search?q=
+examples:
+  - gh
+  - gh scottylabs

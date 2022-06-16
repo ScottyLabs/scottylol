@@ -8,3 +8,5 @@ matches:
   - c
 home: https://calendar.google.com/
 searchUrl: https://calendar.google.com/u/
+examples:
+  - cal

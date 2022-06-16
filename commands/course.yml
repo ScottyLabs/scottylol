@@ -10,3 +10,6 @@ matches:
   - curse
 searchUrl: https://cmucourses.com/course/
 home: https://cmucourses.com
+examples:
+  - fce
+  - fce 122

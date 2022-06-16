@@ -6,3 +6,6 @@ matches:
  - diderot
 searchUrl: https://www.diderot.one/courses/
 home: https://www.diderot.one
+examples:
+  - d
+  - d 122
