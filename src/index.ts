@@ -21,12 +21,17 @@ type Redirect = {
   home: string
 }
 
+type Example = {
+  command: string;
+  uriCommand: string;
+}
+
 type CommandMapping = {[key: string]: Redirect};
 type CommandHelpInfo = {
   name: string;
   description: string;
   matches: string[];
-  examples: string[];
+  examples: Example[];
 }
 
 type CommandData = {
@@ -46,7 +51,9 @@ const readCommands = (): CommandData => {
     const name = fileYaml.name;
     const description = fileYaml.description;
     const matches = fileYaml.matches;
-    const examples = fileYaml.examples;
+    const examples = fileYaml.examples.map(example => {
+      return {command: example, uriCommand: encodeURIComponent(example)};
+    });
     const info = {name, description, matches, examples};
     
     helpInfo.push(info);
