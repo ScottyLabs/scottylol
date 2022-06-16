@@ -3,16 +3,16 @@
     <td><%- commandHelpInfo.name %></td>
     <td><%- commandHelpInfo.description %></td>
     <td>
-      <ul>
+      <ul class="list-group">
         <% for (const match of commandHelpInfo.matches) { %>
-          <li><a href=https://scotty.lol/search?q=<%- match -%>><%- match -%></a></li>
+          <a class="list-group-item list-group-item-action" href=https://scotty.lol/search?q=<%- match -%>><%- match -%></a>
         <% } %>
       </ul>
     </td>
     <td>
-      <ul>
+      <ul class="list-group">
         <% for (const example of commandHelpInfo.examples) { %>
-          <li><a href=https://scotty.lol/search?q=<%- example -%>><%- example -%></a></li>
+          <a class="list-group-item list-group-item-action" href=https://scotty.lol/search?q=<%- example -%>><%- example -%></a>
         <% } %>
       </ul>
     </td>
