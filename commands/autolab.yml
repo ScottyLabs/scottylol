@@ -5,3 +5,6 @@ matches:
   - autolab
 home: https://autolab.andrew.cmu.edu/
 searchUrl: https://autolab.andrew.cmu.edu/courses/
+examples:
+  - autolab
+  - autolab 15122-f20

@@ -8,3 +8,5 @@ matches:
   - goog
 searchUrl: https://google.com/search?q=
 home: https://google.com
+examples:
+  - g how to exit vim

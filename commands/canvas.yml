@@ -7,3 +7,6 @@ matches:
   - cv
 home: https://canvas.cmu.edu/
 searchUrl: https://canvas.cmu.edu/courses/
+examples:
+  - can
+  - can 17606

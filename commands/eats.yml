@@ -6,4 +6,7 @@ matches:
   - cmueats
   - noms
   - dining
+  - eats
 home: https://cmueats.com
+examples:
+  - eats

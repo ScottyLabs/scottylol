@@ -7,3 +7,6 @@ matches:
   - docs
 home: https://drive.google.com/
 searchUrl: https://drive.google.com/drive/search?q=
+examples:
+  - drive
+  - drive scottylabs

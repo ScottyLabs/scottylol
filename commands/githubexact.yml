@@ -7,3 +7,5 @@ matches:
   - githubx
 home: https://github.com
 searchUrl: https://github.com/
+examples:
+  - ghx scottylabs

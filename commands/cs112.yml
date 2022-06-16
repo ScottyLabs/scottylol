@@ -2,7 +2,9 @@ name: 15-112 Course Website
 description: Go to the course website for 15-112 Fundamentals of Programming and Computer Science.
 author: dchwang
 matches:
-  - "112"
-  - "15112"
+  - 112
+  - 15112
   - 15-112
 home: https://www.cs.cmu.edu/~112
+examples:
+  - 112

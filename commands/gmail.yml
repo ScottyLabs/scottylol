@@ -8,3 +8,6 @@ matches:
   - letters
 home: https://gmail.com
 searchUrl: https://mail.google.com/mail/u/
+examples:
+  - gmail
+  - gmail 0
