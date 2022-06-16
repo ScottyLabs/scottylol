@@ -1,0 +1,8 @@
+description: Redirect to StackOverflow. Include search terms in the query to search StackOverflow.
+author: rgodse
+matches:
+  - so
+  - stackoverflow
+  - idk
+home: https://stackoverflow.com/
+searchUrl: https://stackoverflow.com/search?q=

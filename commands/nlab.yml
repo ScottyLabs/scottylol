@@ -1,0 +1,7 @@
+description: Redirect to nLab. Include regex search terms in the query to search nLab source.
+author: rgodse
+matches:
+  - nlab
+  - nl
+home: https://ncatlab.org/nlab/show/HomePage
+searchUrl: https://ncatlab.org/nlab/search?query=
