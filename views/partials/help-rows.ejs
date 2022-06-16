@@ -11,8 +11,8 @@
     </td>
     <td>
       <ul class="list-group">
-        <% for (const example of commandHelpInfo.examples) { %>
-          <a class="list-group-item list-group-item-action" href=https://scotty.lol/search?q=<%- example -%>><%- example -%></a>
+        <% for (const {command, uriCommand} of commandHelpInfo.examples) { %>
+          <a class="list-group-item list-group-item-action" href=https://scotty.lol/search?q=<%- uriCommand -%>><%- command -%></a>
         <% } %>
       </ul>
     </td>
