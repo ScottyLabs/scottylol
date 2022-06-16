@@ -1,5 +1,5 @@
 name: GitHub
-description: Go to github.com/query, e.g. "gh scottylabs" goes to github.com/scottylabs
+description: Go to github.com/query, e.g. "ghx scottylabs" goes to github.com/scottylabs
 author: rgodse
 matches:
   - ghx
