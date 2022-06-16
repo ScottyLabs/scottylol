@@ -1,0 +1,9 @@
+name: GitHub
+description: Go to github.com/query, e.g. "gh scottylabs" goes to github.com/scottylabs
+author: rgodse
+matches:
+  - ghx
+  - githubexact
+  - githubx
+home: https://github.com
+searchUrl: https://github.com/
