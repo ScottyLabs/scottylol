@@ -13,7 +13,7 @@ type CommandConfig = {
   matches: string[];
   searchUrl?: string;
   home: string;
-  example: string[];
+  examples: string[];
 }
 
 type Redirect = {
@@ -22,15 +22,34 @@ type Redirect = {
 }
 
 type CommandMapping = {[key: string]: Redirect};
+type CommandHelpInfo = {
+  name: string;
+  description: string;
+  matches: string[];
+  examples: string[];
+}
 
-const readCommands = (): CommandMapping => {
+type CommandData = {
+  mapping: CommandMapping;
+  helpInfo: CommandHelpInfo[];
+}
+
+const readCommands = (): CommandData => {
   const commandDir = fs.readdirSync(COMMAND_DIR);
-  const result: CommandMapping = {};
+  const mapping: CommandMapping = {};
+  const helpInfo: CommandHelpInfo[] = [];
   for (const filename of commandDir) {
     const file = fs.readFileSync(COMMAND_DIR + '/' + filename).toString();
     const fileYaml: CommandConfig = yaml.parse(file);
     const searchUrl = fileYaml.searchUrl;
     const home = fileYaml.home;
+    const name = fileYaml.name;
+    const description = fileYaml.description;
+    const matches = fileYaml.matches;
+    const examples = fileYaml.examples;
+    const info = {name, description, matches, examples};
+    
+    helpInfo.push(info);
 
     try {
       if (searchUrl) {
@@ -43,28 +62,28 @@ const readCommands = (): CommandMapping => {
       continue;
     }
 
-    for (const command of fileYaml['matches']) {
-      if (command in result) {
+    for (const command of matches) {
+      if (command in mapping) {
         console.log("${command} already declared!");
         continue;
       }
       const redirect: Redirect = {searchUrl, home};
-      result[command] = redirect;
+      mapping[command] = redirect;
     }
   }
-  return result;
+  return {mapping, helpInfo};
 }
 
 (async () => {
-  const mappings = readCommands();
+  const {mapping, helpInfo} = readCommands();
   const app = express();
 
   function getMapping(token: string, query?: string):URL|null {
-    if (!(token in mappings)) {
+    if (!(token in mapping)) {
       return null;
     }
 
-    const config = mappings[token];
+    const config = mapping[token];
     const home = config.home;
     const searchUrl = config.searchUrl;
     const target = (searchUrl === undefined || query === undefined) ? home : searchUrl + query;
@@ -91,7 +110,7 @@ const readCommands = (): CommandMapping => {
 
     // If no matching token is found go to fallback
     if (!url) {
-      const closest = closestMatch(token, Object.keys(mappings));
+      const closest = closestMatch(token, Object.keys(mapping));
       const currQuery = match[2] ? " " + match[2] : "";
       return next({token, closest, currQuery, currSearch:q});
     }
@@ -100,7 +119,7 @@ const readCommands = (): CommandMapping => {
   });
 
   app.get("/help", (req, res, next) => {
-
+    res.send(helpInfo);
   });
 
   const errorHandler: express.ErrorRequestHandler = (value: { token: string, closest: string, currQuery: string, currSearch:string }, req, res, next) => {
