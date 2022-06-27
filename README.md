@@ -10,6 +10,11 @@ Scottylol is an exciting search tool for CMU. It is ScottyLabs' implementation o
 - Type `token query` in your browser's search bar to see the power of `scottylol`. For example, `course 15251` will search our course tool for 15251!
 - See below for how to add more useful commands to `scottylol` :)
 
+### Noob Version
+
+- Designed for users accustomed to using Google search from search bar. Redirects to Google search if search terms do not match a scotty.lol command.
+- To set up, follow the above instructions, but use the following URL for the search engine: `https://scotty.lol/noob?q=%s`
+
 
 ## Dev instructions
 
