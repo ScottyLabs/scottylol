@@ -1,0 +1,14 @@
+name: ScottyLabs Go
+description: Go to go.scottylabs.org routes
+author: wweerasi
+matches:
+  - go
+  - scottylabs
+  - scotty
+  - sl
+home: https://scottylabs.org
+searchUrl: https://go.scottylabs.org/
+examples:
+  - scotty minutes
+  - scottylabs tech
+  - sl zoom
