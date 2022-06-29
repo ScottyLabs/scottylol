@@ -1,0 +1,19 @@
+name: Lint
+on:
+  - push
+  - pull_request
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: npm i
+        shell: bash
+      - name: Check TypeScript
+        run: npx tsc --noEmit
+        shell: bash
+      - name: Run ESLint
+        run: npm run lint
+        shell: bash
