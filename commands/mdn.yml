@@ -1,5 +1,5 @@
 name: MDN Web Docs
-description: Search the MDN Web Docs
+description: Redirect to MDN Web Docs. Include search terms in the query to search for those terms.
 author: dchwang
 matches:
   - mdn

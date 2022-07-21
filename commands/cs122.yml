@@ -1,9 +1,10 @@
-name: 15122
-description: Redirect to 15122 website
+name: CS122 Course Website
+description: Redirect to the course website for 15-122, Principles of Imperative Computation.
 author: wweerasi
 matches:
   - 15122
   - 122
+  - 15-122
 home: https://www.cs.cmu.edu/~15122/
 examples:
   - 122

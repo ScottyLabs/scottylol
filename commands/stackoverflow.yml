@@ -1,4 +1,5 @@
-description: Redirect to StackOverflow. Include search terms in the query to search StackOverflow.
+name: Stack Overflow
+description: Redirect to Stack Overflow. Include search terms in the query to search StackOverflow.
 author: rgodse
 matches:
   - so

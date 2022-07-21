@@ -1,5 +1,5 @@
 name: ScottyLabs Go
-description: Go to go.scottylabs.org routes
+description: Redirect to go.scottylabs.org with the query as the path.
 author: wweerasi
 matches:
   - go

@@ -1,5 +1,5 @@
 name: Autolab
-description: Redirect to autolab. Include the autolab course code in the query to go to the right course page.
+description: Redirect to autolab. Include the autolab course name in the query to go to the right course page.
 author: wweerasi
 matches:
   - autolab

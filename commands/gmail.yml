@@ -1,5 +1,5 @@
-name: GMail
-description: Search your gmail
+name: Gmail
+description: Redirect to Gmail. Include an account number to redirect to the inbox of that account.
 author: wweerasi
 matches:
   - gmail

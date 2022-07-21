@@ -1,9 +1,9 @@
 name: Diderot
-description: Access a course Diderot page.
+description: Redirect to Diderot. Include the Diderot course code in the query to go to the right course page.
 author: rgodse
 matches:
- - d
- - diderot
+  - d
+  - diderot
 searchUrl: https://www.diderot.one/courses/
 home: https://www.diderot.one
 examples:
