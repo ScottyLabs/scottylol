@@ -1,5 +1,5 @@
 Name: Pokes
-description: Poke people
+description: Redirect to Facebook Pokes.
 author: rgodse
 matches:
   - pk

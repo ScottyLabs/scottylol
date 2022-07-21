@@ -1,5 +1,5 @@
 name: GitHub
-description: Search github like "gh scottylabs"
+description: Redirect to GitHub. Include search terms in the query to search GitHub for those terms.
 author: wweerasi
 matches:
   - gh

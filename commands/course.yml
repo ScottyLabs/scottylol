@@ -1,5 +1,5 @@
 name: Course Tool
-description: Search info about courses at CMU like "fce 122"
+description: Search info about courses at CMU. Include course number(s) to redirect to info about those course(s).
 author: bradleyt
 matches:
   - course

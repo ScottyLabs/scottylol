@@ -1,5 +1,5 @@
 name: TypeScript Handbook
-description: View the TypeScript Docs
+description: Redirect to the TypeScript Docs.
 author: dchwang
 matches:
   - ts

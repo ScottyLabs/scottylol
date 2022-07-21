@@ -1,5 +1,5 @@
-name: Google Drive
-description: Search your google drive like "drive hello world"
+name: Drive
+description: Redirect to Google Drive. Include search terms to search your Google Drive for those terms.
 author: wweerasi
 matches:
   - gdrive

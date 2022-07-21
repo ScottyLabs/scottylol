@@ -1,5 +1,5 @@
-name: GitHub
-description: Go to github.com/query, e.g. "ghx scottylabs" goes to github.com/scottylabs
+name: GitHub Exact
+description: Redirect to a particular github url path. For example, `ghx scottylabs` redirects to https://github.com/scottylabs.
 author: rgodse
 matches:
   - ghx

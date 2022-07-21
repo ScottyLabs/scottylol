@@ -1,5 +1,5 @@
 name: SIO
-description: Visit SIO.
+description: Redirect to SIO.
 author: rgodse
 matches:
   - sio

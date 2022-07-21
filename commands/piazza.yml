@@ -1,5 +1,5 @@
 name: Piazza
-description: Redirect to piazza website
+description: Redirect to piazza website. Include course code in the query to go to the right piazza page.
 author: wweerasi
 matches:
   - piazza

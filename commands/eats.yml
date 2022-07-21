@@ -1,5 +1,5 @@
 name: CMU Eats
-description: Search info about dining locations at CMU
+description: Redirect to page containing info about dining locations at CMU.
 author: wweerasi
 matches:
   - eat

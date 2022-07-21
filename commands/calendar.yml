@@ -1,5 +1,5 @@
 name: Calendar
-description: Redirect to calendar.
+description: Redirect to Google Calendar.
 author: wweerasi
 matches:
   - cal

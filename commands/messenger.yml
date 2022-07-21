@@ -1,5 +1,5 @@
 name: Messenger
-description: Access Facebook Messenger
+description: Redirect to Facebook Messenger.
 author: rgodse
 matches:
   - m

@@ -1,5 +1,5 @@
-name: 15251
-description: Redirect to 15251 website
+name: CS251 Course Website
+description: Redirect to the course website for 15-251, Great Ideas in Theoretical Computer Science.
 author: wweerasi
 matches:
   - 15251

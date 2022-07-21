@@ -1,5 +1,5 @@
 name: Google
-description: Search on Google
+description: Redirect to Google. Include search terms to search Google for those terms.
 author: dchwang
 matches:
   - g
@@ -9,4 +9,5 @@ matches:
 searchUrl: https://google.com/search?q=
 home: https://google.com
 examples:
+  - g
   - g how to exit vim
