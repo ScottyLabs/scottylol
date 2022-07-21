@@ -1,0 +1,8 @@
+name: Help
+description: Redirects to scotty.lol help page
+matches:
+  - h
+  - help
+home: https://scotty.lol/help
+examples:
+  - h
