@@ -1,0 +1,12 @@
+name: LinkedIn
+description: Redirect to LinkedIn. Include search terms in the query to search LinkedIn for those terms.
+author: rgodse
+matches:
+  - li
+  - linkedin
+  - letsseepaulallenslinkedinprofile
+home: https://www.linkedin.com/
+searchUrl: https://www.linkedin.com/search/results/all/?keywords=
+examples:
+  - li
+  - li rajeev godse

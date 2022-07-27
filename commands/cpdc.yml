@@ -1,0 +1,9 @@
+name: CPDC
+description: Redirect to the home page of CMU's Career and Professional Development Center.
+author: rgodse
+matches:
+  - cpdc
+  - kevincollins
+home: https://www.cmu.edu/career/
+examples:
+  - cpdc

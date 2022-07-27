@@ -1,0 +1,11 @@
+name: LeetCode
+description: Redirect to LeetCode. Include search terms in the query to search LeetCode problems for those terms.
+author: rgodse
+matches:
+  - lc
+  - leetcode
+home: https://leetcode.com/
+searchUrl: https://leetcode.com/problemset/all/?search=
+examples:
+  - lc
+  - lc maximum contiguous subsequence sum

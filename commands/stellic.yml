@@ -1,0 +1,10 @@
+name: Stellic
+description: Redirect to Stellic, CMU's degree planning tool.
+author: rgodse
+matches:
+  - st
+  - stlc
+  - stellic
+home: https://academicaudit.andrew.cmu.edu/app/planner
+examples:
+  - stellic
