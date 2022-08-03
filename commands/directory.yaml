@@ -1,5 +1,5 @@
 name: CMU Directory
-description: Redirect to the CMU Directory. Include a query to perform a basic search (andrew ID, name, or email), replace spaces with '+', wildcard '*' accepted for first or last name.
+description: Redirect to the CMU Directory. Include a query to perform a basic search (andrew ID, name, or email), wildcard '*' accepted for first or last name.
 author: mdhamank
 matches:
   - dir
@@ -10,5 +10,5 @@ examples:
   - directory
   - dir mdhamank 
   - directory Mihir
-  - dir Thomas+*
-  - dir *+Cortina
+  - dir Thomas *
+  - dir * Cortina
