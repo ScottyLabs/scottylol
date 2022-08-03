@@ -1,0 +1,14 @@
+name: CMU Directory
+description: Redirect to the CMU Directory. Include a query to perform a basic search (andrew ID, name, or email), replace spaces with '+', wildcard '*' accepted for first or last name.
+author: mdhamank
+matches:
+  - dir
+  - directory
+home: https://directory.andrew.cmu.edu/
+searchUrl: https://directory.andrew.cmu.edu/index.cgi?action=Search&searchtype=basic&activetab=basic&search=
+examples:
+  - directory
+  - dir mdhamank 
+  - directory Mihir
+  - dir Thomas+*
+  - dir *+Cortina
