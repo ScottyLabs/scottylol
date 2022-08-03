@@ -1,0 +1,9 @@
+name: Housing & Dining
+description: Redirect to the home page of CMU's Housing and Dining portal.
+author: mdhamank
+matches:
+  - housing
+  - starrez
+home: https://starrez.andrew.cmu.edu/StarRezPortalX/
+examples:
+  - housing
