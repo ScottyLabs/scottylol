@@ -1,0 +1,12 @@
+name: Netflix
+description: Redirect to Netflix. Include search terms to search Netflix for those terms.
+author: rgodse
+matches:
+  - n
+  - netflix
+  - flix
+searchUrl: https://www.netflix.com/search?q=
+home: https://www.netflix.com
+examples:
+  - n
+  - n Avatar
