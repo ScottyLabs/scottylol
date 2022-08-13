@@ -1,5 +1,5 @@
 name: Canvas
-description: Redirect to autolab. Include the canvas course code in the query to go to the right course page.
+description: Redirect to canvas. Include the canvas course code in the query to go to the right course page.
 author: rgodse
 matches:
   - can

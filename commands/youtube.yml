@@ -1,0 +1,11 @@
+name: YouTube
+description: Redirect to YouTube. Include search terms to search YouTube for those terms.
+author: rgodse
+matches:
+  - yt
+  - youtube
+searchUrl: https://www.youtube.com/results?search_query=
+home: https://www.youtube.com
+examples:
+  - yt
+  - yt Brad Owen
