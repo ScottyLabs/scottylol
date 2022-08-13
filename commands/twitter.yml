@@ -1,0 +1,11 @@
+name: Twitter
+description: Redirect to Twitter. Include search terms to search Twitter for those terms.
+author: rgodse
+matches:
+  - tw
+  - twitter
+searchUrl: https://www.twitter.com/search?src=scottylol&q=
+home: https://twitter.com
+examples:
+  - tw
+  - tw addykan
