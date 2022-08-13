@@ -1,0 +1,11 @@
+name: Reddit
+description: Redirect to Reddit. Include subreddit name to redirect to that subreddit.
+author: rgodse
+matches:
+  - r
+  - reddit
+searchUrl: https://www.reddit.com/r/
+home: https://www.reddit.com
+examples:
+  - r
+  - r cmu
