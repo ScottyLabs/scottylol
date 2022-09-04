@@ -1,0 +1,9 @@
+name: CS440 Course Website
+description: Redirect to the course website for 15-440, Distributed Systems
+author: wweerasi
+matches:
+  - 15440
+  - 440
+home: https://www.composablesystems.org/15-440/fa2022/
+examples:
+  - 440
