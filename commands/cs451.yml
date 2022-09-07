@@ -1,0 +1,9 @@
+name: CS451 Course Website
+description: Redirect to the course website for 15-451, Algorithm Design and Analysis
+author: wweerasi
+matches:
+  - 15451
+  - 451
+home: https://www.cs.cmu.edu/~15451-f22/
+examples:
+  - 451
