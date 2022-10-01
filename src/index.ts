@@ -101,7 +101,7 @@ const readCommands = (): CommandData => {
     const home = config.home;
     const searchUrl = config.searchUrl;
     const target =
-      searchUrl === undefined || query === undefined ? home : searchUrl + query;
+      searchUrl === undefined || query === undefined ? home : searchUrl + encodeURIComponent(query);
 
     return new URL(target);
   }
