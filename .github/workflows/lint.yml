@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: yarn i
+        run: yarn
         shell: bash
       - name: Check TypeScript
         run: yarn tsc --noEmit
