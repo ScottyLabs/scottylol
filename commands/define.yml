@@ -1,5 +1,5 @@
 name: Define
-description: Redirects to the Oxford dictionary when cleint wants word definition
+description: Redirects to the Oxford dictionary when client wants word definition
 author: jdngai
 home: https://www.oed.com/
 searchUrl: https://www.oed.com/search?searchType=dictionary&q=
