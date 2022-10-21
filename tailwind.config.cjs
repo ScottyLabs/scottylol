@@ -3,9 +3,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'inconsolata': ['"Inconsolata"', 'sans-serif'],
-      },
-    },
+        inconsolata: ['"Inconsolata"', 'sans-serif']
+      }
+    }
   },
-  plugins: [],
-}
+  plugins: []
+};
