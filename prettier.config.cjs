@@ -4,6 +4,5 @@ module.exports = {
   tailwindConfig: './tailwind.config.cjs',
   trailingComma: 'none',
   semi: true,
-  singleQuote: true,
-  jsxSingleQuote: true
+  singleQuote: true
 };
