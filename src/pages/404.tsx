@@ -1,14 +1,12 @@
 import { useRouter } from 'next/router';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
-const LostPage: React.FC = () => {
-	const router = useRouter();
+export default function LostPage() {
+  const router = useRouter();
 
-	useEffect(() => {
-		router.replace('/help');
-	});
+  useEffect(() => {
+    router.replace('/help');
+  });
 
-	return null;
-};
-
-export default LostPage;
+  return null;
+}
