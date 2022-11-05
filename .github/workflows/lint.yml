@@ -7,11 +7,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: npm i
+        run: yarn
         shell: bash
       - name: Check TypeScript
-        run: npx tsc --noEmit
+        run: yarn tsc --noEmit
         shell: bash
       - name: Run ESLint
-        run: npm run lint
+        run: yarn lint
         shell: bash
