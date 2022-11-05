@@ -23,7 +23,7 @@ module.exports = {
       repo: 'https://github.com/ScottyLabs/scottylol',
       path: '/opt/github/scottylol',
       'post-deploy':
-        'yarn install && yarn build && pm2 reload ecosystem.config.js --env production && pm2 save',
+        'yarn install && yarn build && pm2 reload ecosystem.config.cjs --env production && pm2 save',
       env: {
         NODE_ENV: 'production'
       }
