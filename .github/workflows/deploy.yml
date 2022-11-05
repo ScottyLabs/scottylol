@@ -33,6 +33,6 @@ jobs:
 
       - name: Deploy
         # run: env $(cat .env | grep -v \"#\" | xargs) pm2 deploy ecosystem.config.js staging
-        run: pm2 deploy ecosystem.config.js production
+        run: pm2 deploy ecosystem.config.cjs production
         # Or alternately, put this deploy script in your package.json's scripts and run it using yarn/npm:
         # run: yarn deploy
