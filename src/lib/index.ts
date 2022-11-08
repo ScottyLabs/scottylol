@@ -7,20 +7,19 @@ export type CommandConfig = {
   author: string;
   matches: string[];
   searchUrl?: string;
+  skipEscaping?: boolean;
   home: string;
   examples: string[];
 };
 
 export type Redirect = {
+  skipEscaping?: boolean;
   searchUrl?: string;
   home: string;
 };
 
 export type CommandMapping = {
-  [key: string]: {
-    searchUrl?: string;
-    home: string;
-  };
+  [key: string]: Redirect;
 };
 
 export type CommandHelpInfo = {
@@ -63,6 +62,7 @@ export const readCommands = () => {
     const file = fs.readFileSync(`./src/lib/commands/${filename}`).toString();
     const fileYaml: CommandConfig = yaml.parse(file);
     const searchUrl = fileYaml.searchUrl ?? '';
+    const skipEscaping = fileYaml.skipEscaping ?? false;
     const { home } = fileYaml;
     const { name } = fileYaml;
     const { description } = fileYaml;
@@ -87,7 +87,7 @@ export const readCommands = () => {
         return;
       }
 
-      const redirect: Redirect = { searchUrl, home };
+      const redirect: Redirect = { searchUrl, home, skipEscaping };
       mapping[match] = redirect;
     });
   });
