@@ -1,16 +1,11 @@
 import { GetServerSideProps } from 'next';
 import { isValidUrl, readCommands } from '../lib';
 
-interface Props {
-  query: string;
-  currSearch: string;
-}
-
-export default function SearchPage() {
+export default function NoobPage() {
   return null;
 }
 
-export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { mapping } = readCommands();
   const { q } = ctx.query;
   if (typeof q !== 'string') return { notFound: true };
