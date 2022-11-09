@@ -5,7 +5,7 @@ export default function NoobPage() {
   return null;
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps<{}> = async (ctx) => {
   const { mapping } = readCommands();
   const { q } = ctx.query;
   if (typeof q !== 'string') return { notFound: true };
