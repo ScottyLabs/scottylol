@@ -1,4 +1,0 @@
-[build.environment]
-  NODE_VERSION = "16"
-  NPM_FLAGS = "--version" # prevent Netlify npm install
-  AWS_LAMBDA_JS_RUNTIME = "nodejs16.x"
