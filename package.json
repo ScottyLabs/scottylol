@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier . --write --ignore-path .gitignore"
+    "format": "prettier . --write --ignore-path .gitignore",
+    "test": "cypress run",
+    "cypress": "cypress open"
   },
   "browser": {
     "fs": false,
@@ -36,6 +38,7 @@
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
+    "cypress": "^11.0.1",
     "eslint": "8.2.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
