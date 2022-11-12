@@ -17,3 +17,5 @@ describe('Run google query', () => {
     });
   });
 });
+
+export {};
