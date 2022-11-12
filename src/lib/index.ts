@@ -55,7 +55,17 @@ export const isValidUrl = (s: string) => {
   }
 };
 
-export const readCommands = () => {
+const memoizeUnit = <T>(f: (_: void) => T) => {
+  let cache: T | null = null;
+  return () => {
+    if (cache === null) {
+      cache = f();
+    }
+    return cache;
+  };
+};
+
+export const readCommands = memoizeUnit(() => {
   const commandDir = fs.readdirSync('./src/lib/commands');
   const mapping: CommandMapping = {};
   const helpInfo: CommandHelpInfo[] = [];
@@ -93,4 +103,4 @@ export const readCommands = () => {
   });
 
   return { mapping, helpInfo };
-};
+});
