@@ -8,7 +8,6 @@ export default function NoobPage() {
 export const getServerSideProps: GetServerSideProps<{}> = async (ctx) => {
   const { mapping } = readCommands();
   let q = ctx.req.url;
-  console.log(q);
   if (typeof q !== 'string') return { notFound: true };
   q = decodeURIComponent(q.replace('/noob?q=', ''));
   const match = q.match(/^(\S*)(?:\s(.*))?$/);
