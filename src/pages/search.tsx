@@ -50,7 +50,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const { mapping } = readCommands();
   let q = ctx.req.url;
   if (typeof q !== 'string') return { notFound: true };
-  q = decodeURIComponent(q.replace('/search?q=', ''));
+  q = decodeURIComponent(q.replace(/^[^_]*=/, ''));
   const match = q.match(/^(\S*)(?:\s(.*))?$/);
   if (match === null) return { notFound: true };
   const token = match[1].toLowerCase();
