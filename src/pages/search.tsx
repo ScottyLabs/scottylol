@@ -68,7 +68,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   return {
     props: {
       query: `${closest}${currQuery}`,
-      currSearch: q
+      currSearch: query
     }
   };
 };
