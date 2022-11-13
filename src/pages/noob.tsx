@@ -7,12 +7,13 @@ export default function NoobPage() {
 
 export const getServerSideProps: GetServerSideProps<{}> = async (ctx) => {
   const { mapping } = readCommands();
-  const { q } = ctx.query;
+  let q = ctx.req['url'];
   if (typeof q !== 'string') return { notFound: true };
+  q = decodeURIComponent(q.replace('/noob?q=', ''));
   const match = q.match(/^(\S*)(?:\s(.*))?$/);
   if (match === null) return { notFound: true };
   const token = match[1].toLowerCase();
-  const query = match[2];
+  const query = encodeURIComponent(match[2]);
   const config = mapping[token];
   const home = config?.home;
   const searchUrl = config?.searchUrl;
@@ -22,7 +23,7 @@ export const getServerSideProps: GetServerSideProps<{}> = async (ctx) => {
     return { redirect: { destination: target, permanent: true } };
   return {
     redirect: {
-      destination: `https://google.com/search?q=${q}`,
+      destination: `https://google.com/search?q=${encodeURIComponent(q)}`,
       permanent: false
     }
   };
