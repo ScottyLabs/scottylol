@@ -48,7 +48,9 @@ export default function SearchPage({ query, currSearch }: Props) {
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const { mapping } = readCommands();
-  let q = ctx.resolvedUrl;
+  let q = ctx.req.url;
+  console.log(ctx.resolvedUrl);
+  console.log(ctx.req);
   if (typeof q !== 'string') return { notFound: true };
   q = decodeURIComponent(q.replace(/^[^_]*=/, ''));
   const match = q.match(/^(\S*)(?:\s(.*))?$/);
