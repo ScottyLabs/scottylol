@@ -48,11 +48,8 @@ export default function SearchPage({ query, currSearch }: Props) {
 
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const { mapping } = readCommands();
-  let q = ctx.req.url;
-  console.log(ctx.resolvedUrl);
-  console.log(ctx.req);
+  const { q } = ctx.query;
   if (typeof q !== 'string') return { notFound: true };
-  q = decodeURIComponent(q.replace(/^[^_]*=/, ''));
   const match = q.match(/^(\S*)(?:\s(.*))?$/);
   if (match === null) return { notFound: true };
   const token = match[1].toLowerCase();
@@ -66,7 +63,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
     return { redirect: { destination: target, permanent: true } };
 
   const closest = closestMatch(token, Object.keys(mapping));
-  const currQuery = query ? ` ${query}` : '';
+  const currQuery = match[2] ? ` ${match[2]}` : '';
   return {
     props: {
       query: `${closest}${currQuery}`,
