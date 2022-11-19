@@ -7,11 +7,9 @@ export default function NoobPage() {
 
 export const getServerSideProps: GetServerSideProps<{}> = async (ctx) => {
   const { mapping } = readCommands();
-  console.log(ctx.req.url);
-  console.log(ctx.resolvedUrl);
-  let q = ctx.req.url;
-  if (typeof q !== 'string') return { notFound: true };
-  q = decodeURIComponent(q.replace(/^[^_]*=/, ''));
+  const { url } = ctx.req;
+  if (typeof url !== 'string') return { notFound: true };
+  const q = decodeURIComponent(url.replace(/^[^_]*=/, ''));
   const match = q.match(/^(\S*)(?:\s(.*))?$/);
   if (match === null) return { notFound: true };
   const token = match[1].toLowerCase();
