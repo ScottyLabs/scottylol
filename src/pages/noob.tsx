@@ -9,7 +9,7 @@ export const getServerSideProps: GetServerSideProps<{}> = async (ctx) => {
   const { mapping } = readCommands();
   const { url } = ctx.req;
   if (typeof url !== 'string') return { notFound: true };
-  const q = url.replace(/^[^_]*=/, '').replaceAll('=', '');
+  const q = decodeURIComponent(url.replace(/^[^=]+[=]*/, ''));
   const match = q.match(/^(\S*)(?:\s(.*))?$/);
   if (match === null) return { notFound: true };
   const token = match[1].toLowerCase();
