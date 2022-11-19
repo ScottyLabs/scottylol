@@ -8,8 +8,8 @@ matches:
   - fces
   - units
   - curse
-searchUrl: https://beta.cmucourses.com/search?q=
-home: https://beta.cmucourses.com
+searchUrl: https://cmucourses.com/search?q=
+home: https://cmucourses.com
 examples:
   - fce
   - fce 122
