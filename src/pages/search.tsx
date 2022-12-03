@@ -53,12 +53,14 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const match = q.match(/^(\S*)(?:\s(.*))?$/);
   if (match === null) return { notFound: true };
   const token = match[1].toLowerCase();
-  const query = encodeURIComponent(match[2]);
+  const query = match[2];
   const config = mapping[token];
   const home = config?.home;
   const searchUrl = config?.searchUrl;
   const target =
-    searchUrl === undefined || query === undefined ? home : searchUrl + query;
+    searchUrl === undefined || query === undefined
+      ? home
+      : searchUrl + encodeURIComponent(query);
   if (isValidUrl(target))
     return { redirect: { destination: target, permanent: true } };
 
