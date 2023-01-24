@@ -7,7 +7,7 @@ matches:
   - noms
   - dining
   - eats
-searchUrl: https://cmueats.com/search?q=
+searchUrl: https://cmueats.com?q=
 home: https://cmueats.com
 examples:
   - eats
