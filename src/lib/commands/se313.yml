@@ -1,0 +1,10 @@
+name: 17313 course website 
+description: Redirect to the course website for 17-313
+author: wweerasi
+matches:
+  - 17313
+  - 313
+  - se
+home: https://cmu-313.github.io
+examples:
+  - 313
