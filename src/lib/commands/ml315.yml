@@ -1,0 +1,10 @@
+name: ML315 Course Website
+description: Redirect to the course website for 10-315
+author: wweerasi
+matches:
+  - 10315
+  - 315
+  - ML
+home: https://www.cs.cmu.edu/~10315/
+examples:
+  - 315
