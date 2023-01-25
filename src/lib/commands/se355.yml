@@ -1,0 +1,9 @@
+name: 17355 course website 
+description: Redirect to the course website for 17-355
+author: wweerasi
+matches:
+  - 17355
+  - 355
+home: https://cmu-program-analysis.github.io/2023/index.html
+examples:
+  - 17355
