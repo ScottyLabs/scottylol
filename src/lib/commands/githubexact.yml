@@ -7,5 +7,6 @@ matches:
   - githubx
 home: https://github.com
 searchUrl: https://github.com/
+skipEscaping: true
 examples:
   - ghx scottylabs
