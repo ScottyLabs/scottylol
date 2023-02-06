@@ -17,12 +17,14 @@ export const getServerSideProps: GetServerSideProps<{}> = async (ctx) => {
   const home = config?.home;
   const searchUrl = config?.searchUrl;
   const target =
-    searchUrl === undefined || query === undefined ? home : searchUrl + query;
+    searchUrl === undefined || query === undefined
+      ? home
+      : searchUrl + encodeURIComponent(query);
   if (isValidUrl(target))
     return { redirect: { destination: target, permanent: true } };
   return {
     redirect: {
-      destination: `https://google.com/search?q=${q}`,
+      destination: `https://google.com/search?q=${encodeURIComponent(q)}`,
       permanent: false
     }
   };

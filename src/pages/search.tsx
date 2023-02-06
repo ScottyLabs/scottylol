@@ -57,8 +57,11 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const config = mapping[token];
   const home = config?.home;
   const searchUrl = config?.searchUrl;
+  const escapedQuery = config?.skipEscaping ? query : encodeURIComponent(query);
   const target =
-    searchUrl === undefined || query === undefined ? home : searchUrl + query;
+    searchUrl === undefined || query === undefined
+      ? home
+      : searchUrl + escapedQuery;
   if (isValidUrl(target))
     return { redirect: { destination: target, permanent: true } };
 
