@@ -7,6 +7,8 @@ matches:
   - noms
   - dining
   - eats
+searchUrl: https://cmueats.com?search=
 home: https://cmueats.com
 examples:
   - eats
+  - eat hunan
