@@ -1,0 +1,12 @@
+name: Detexify
+description: Redirect to detexify for latex
+author: wweerasi
+matches:
+  - detex
+  - dtx
+  - detexify
+home: https://detexify.kirelabs.org/
+examples:
+  - dtx
+  - detex
+  - detexify
