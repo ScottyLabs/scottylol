@@ -1,0 +1,13 @@
+name: Bing 
+description: Redirect to Bing. Include search terms to search Bing for those terms.
+author: wweerasi
+matches:
+  - b
+  - bing
+  - bng
+  - bong
+searchUrl: https://www.bing.com/search?q=
+home:  https://www.bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx
+examples:
+  - b
+  - bing what is scottylabs
