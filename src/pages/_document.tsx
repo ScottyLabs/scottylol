@@ -20,8 +20,8 @@ class MyDocument extends Document {
           rel="search"
           type="application/opensearchdescription+xml"
           title="scotty.lol"
-          href="/opensearch.xml" />
-
+          href="/opensearch.xml"
+        />
 
         {/* Browser Metadata */}
         <title>ScottyLOL</title>
