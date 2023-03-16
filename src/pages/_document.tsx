@@ -15,6 +15,19 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap"
           rel="stylesheet"
         />
+        {/* Autodiscovery for Firefox */}
+        <link
+          rel="search"
+          type="application/opensearchdescription+xml"
+          title="scotty.lol"
+          href="/opensearch.xml"
+        />
+        <link
+          rel="search"
+          type="application/opensearchdescription+xml"
+          title="scotty.lol-noob"
+          href="/opensearch_noob.xml"
+        />
 
         {/* Browser Metadata */}
         <title>ScottyLOL</title>

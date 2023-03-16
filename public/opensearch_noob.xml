@@ -1,0 +1,6 @@
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>scotty.lol-noob</ShortName>
+  <Description>A noob-friendly version of scotty.lol. Designed for users accustomed to using Google search from search bar. Redirects to Google search if search terms do not match a scotty.lol command.</Description>
+  <Url type="text/html" template="https://scotty.lol/noob?q={searchTerms}"/>
+</OpenSearchDescription>
