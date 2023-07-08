@@ -1,0 +1,10 @@
+name: Oxford Dictionary
+description: Redirect to the Oxford Dictionary. Include search terms in the query to search dictionary.
+author: sshriram
+matches:
+  - define
+home: https://www.oed.com/
+searchUrl: https://www.oed.com/search?q=
+examples:
+  - define
+  - define pretentious
