@@ -15,6 +15,11 @@ Scottylol is an exciting search tool for CMU. It is ScottyLabs' implementation o
 - Designed for users accustomed to using Google search from search bar. Redirects to Google search if search terms do not match a scotty.lol command.
 - To set up, follow the above instructions, but use the following URL for the search engine: `https://scotty.lol/noob?q=%s`
 
+### Firefox setup
+- Navigate to https://scotty.lol
+- Right click the searchbar -> select `Add "scotty.lol-noob"` or `Add "scotty.lol"` (or both!)
+- Got to Settings -> Default Search Engine and select `scotty.lol` or `scotty.lol-noob`
+
 ## Dev instructions
 
 ### Deployment
