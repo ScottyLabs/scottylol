@@ -1,0 +1,10 @@
+name: Define
+description: Redirect to Oxford English Dictionary. Include the word in the query to go to the right definition page.
+author: kaitlyncliu
+matches:
+  - define
+searchUrl: https://www.oed.com/search?searchType=dictionary&q=
+home: https://www.oed.com/
+examples:
+  - define
+  - define petrichor
