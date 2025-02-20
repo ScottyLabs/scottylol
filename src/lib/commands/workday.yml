@@ -1,0 +1,10 @@
+name: Workday
+description: Redirect to Workday.
+author: xlien
+matches:
+  - wd
+  - work
+  - workday
+home: https://wd5.myworkday.com/cmu/d/home.htmld
+examples:
+  - workday
