@@ -20,14 +20,14 @@ Scottylol is an exciting search tool for CMU. It is ScottyLabs' implementation o
 ### Deployment
 
 ```
-yarn build
-yarn start
+bun run build
+bun start
 ```
 
 ### Development Testing
 
 ```
-yarn dev
+bun dev
 ```
 
 ### Adding new commands
