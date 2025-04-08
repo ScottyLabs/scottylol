@@ -1,0 +1,8 @@
+name: Office of International Education
+description: Redirect to OIE Portal.
+author: xlien
+matches:
+  - oie
+home: https://myoie.andrew.cmu.edu/
+examples:
+  - oie
