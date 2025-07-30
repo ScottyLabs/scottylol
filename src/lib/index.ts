@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 import yaml from 'yaml';
 
 export type CommandConfig = {
@@ -65,11 +66,17 @@ const memoizeUnit = <T>(f: (_: void) => T) => {
 };
 
 export const readCommands = memoizeUnit(() => {
-  const commandDir = fs.readdirSync('./src/lib/commands');
+  const commandDir = fs.readdirSync(
+    path.resolve(process.cwd(), './src/lib/commands')
+  );
   const mapping: CommandMapping = {};
   const helpInfo: CommandHelpInfo[] = [];
   commandDir.forEach((filename) => {
-    const file = fs.readFileSync(`./src/lib/commands/${filename}`).toString();
+    const file = fs
+      .readFileSync(
+        path.resolve(process.cwd(), `./src/lib/commands/${filename}`)
+      )
+      .toString();
     const fileYaml: CommandConfig = yaml.parse(file);
     const searchUrl = fileYaml.searchUrl ?? '';
     const skipEscaping = fileYaml.skipEscaping ?? false;
